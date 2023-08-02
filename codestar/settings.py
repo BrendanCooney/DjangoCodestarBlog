@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['codestarblog23.herokuapp.com', 'localhost', '8000-brendancoon-djangocodes-hppesxfzz5n.ws-eu102.gitpod.io']
+ALLOWED_HOSTS = ['localhost', '8000-brendancoon-djangocodes-hppesxfzz5n.ws-eu102.gitpod.io']
 
 
 # Application definition
@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+    'blog',
 ]
 
 MIDDLEWARE = [
