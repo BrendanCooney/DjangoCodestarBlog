@@ -14,6 +14,7 @@ from pathlib import Path
 
 import os
 import dj_database_url
+from django.contrib.messages import constants as messages
 if os.path.isfile('env.py'):
     import env
 
@@ -31,7 +32,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['bc-codestar-1.herokuapp.com','localhost', '8000-brendancoon-djangocodes-hppesxfzz5n.ws-eu102.gitpod.io','bc-codestar-1-3ce578f765f8.herokuapp.com']
+ALLOWED_HOSTS = ['bc-codestar-1.herokuapp.com','localhost', '8000-brendancoon-djangocodes-hppesxfzz5n.ws-eu102.gitpod.io','bc-codestar-1-3ce578f765f8.herokuapp.com', '8000-brendancoon-djangocodes-tlck2f1fqc5.ws-eu102.gitpod.io']
 
 
 # Application definition
@@ -58,6 +59,14 @@ SITE_ID = 1
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+MESSAGE_TAGS = {
+        messages.DEBUG: 'alert-info',
+        messages.INFO: 'alert-info',
+        messages.SUCCESS: 'alert-success',
+        messages.WARNING: 'alert-warning',
+        messages.ERROR: 'alert-danger',
+    }
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
